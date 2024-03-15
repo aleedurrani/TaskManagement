@@ -1,28 +1,17 @@
 name: Node.js CI
-
 on: push
-
 jobs:
   build-node:
-    runs-on: windows-latest
-
+    runs-on: ubuntu-latest
+    container: node:16
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
       - name: Display Node.js version
         run: node --version
-
       - name: Display npm version
         run: npm --version
-
+      - name: Check out repository
+        uses: actions/checkout@v3
       - name: Install dependencies
         run: npm install
-
       - name: Run the application
         run: node app.js
