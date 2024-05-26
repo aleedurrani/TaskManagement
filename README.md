@@ -122,4 +122,4 @@ The current implementation does not include a direct endpoint for deleting tasks
 
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. 
